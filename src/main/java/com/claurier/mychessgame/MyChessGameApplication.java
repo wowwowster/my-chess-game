@@ -17,7 +17,6 @@ import java.util.Map;
 public class MyChessGameApplication {
 
 	private static final Logger logger = LoggerFactory.getLogger(com.claurier.mychessgame.MyChessGameApplication.class);
-	private static final List<String> requiredOptions = Arrays.asList("dbUrl", "dbUser", "dbPwd");
 
 	public static void main(String[] args) {
 		configureApplication(new SpringApplicationBuilder(), new DefaultApplicationArguments(args)).run(args);
@@ -29,15 +28,8 @@ public class MyChessGameApplication {
 			logger.info(name + " -> " + args.getOptionValues(name));
 		}
 
-		if (!args.getOptionNames().containsAll(requiredOptions)) {
-			logger.error(String.format("Not all required arguments were supplied.  Required arguments are: %s", requiredOptions));
-			System.exit(1);
-		}
 
 		Map<String, Object> properties = new HashMap<>();
-		for (String requiredOption : requiredOptions) {
-			properties.put(requiredOption, args.getOptionValues(requiredOption));
-		}
 
 		if (args.getOptionNames().contains("dropFirst")) {
 			properties.put("liquibase.drop-first", args.getOptionValues("dropFirst"));
