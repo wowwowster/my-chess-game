@@ -19,6 +19,8 @@ public class MyChessGameApplication {
 	private static final Logger logger = LoggerFactory.getLogger(com.claurier.mychessgame.MyChessGameApplication.class);
 
 	public static void main(String[] args) {
+
+		// semble encapsuler SpringApplication.run(MyChessGameApplication.class, args);
 		configureApplication(new SpringApplicationBuilder(), new DefaultApplicationArguments(args)).run(args);
 	}
 
@@ -27,7 +29,6 @@ public class MyChessGameApplication {
 		for (String name : args.getOptionNames()) {
 			logger.info(name + " -> " + args.getOptionValues(name));
 		}
-
 
 		Map<String, Object> properties = new HashMap<>();
 
