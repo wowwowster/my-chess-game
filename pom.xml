@@ -47,7 +47,7 @@
 				<artifactId>liquibase-maven-plugin</artifactId>
 				<version>${liquibase.version}</version>
 				<configuration>
-					<changeLogFile>liquibase/master.xml</changeLogFile>
+					<changeLogFile>config/liquibase/master.xml</changeLogFile>
 					<url>jdbc:postgresql://localhost:5432/MyChessGame</url>
 					<driver>org.postgresql.Driver</driver>
 					<username>MyChessGame</username>
