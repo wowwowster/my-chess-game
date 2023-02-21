@@ -1,0 +1,42 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0    http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  <profiles>
+    <profile>
+      <id>telino</id>
+      <properties>
+        <repo.url>https://nexus.telino.net/repository/maven-public/</repo.url>
+        <repo.snapshots.url>https://nexus.telino.net/repository/maven-snapshots/</repo.snapshots.url>
+        <repo.releases.url>https://nexus.telino.net/repository/maven-releases/</repo.releases.url>
+      </properties>
+	  <releases>
+            <enabled>false</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>telino</activeProfile>
+  </activeProfiles>
+  <mirrors>
+    <mirror>
+      <id>nexus-telino</id>
+      <name>Telino Internal Nexus Repository</name>
+      <url>https://nexus.telino.net/repository/maven-public/</url>
+      <mirrorOf>*</mirrorOf>
+    </mirror>
+  </mirrors>
+  <servers>
+    <server>
+      <id>nexus-telino</id>
+      <username>sylvain.cailleau</username>
+      <password>e9y-DdH-5MY-TVW</password>
+    </server>
+	<server>
+		<id>TomcatServer</id>
+		<username>admin</username>
+		<password>password</password>
+	</server>
+  </servers>
+
+</settings>
