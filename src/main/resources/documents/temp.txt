@@ -1,0 +1,4 @@
+cd "C:\Program Files\Firebird\Firebird_3_0"
+instsvc -r fbserver
+sc query type= service state= all
+
