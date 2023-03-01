@@ -1,4 +1,7 @@
-cd "C:\Program Files\Firebird\Firebird_3_0"
-instsvc -r fbserver
-sc query type= service state= all
+How to highlight current line of execution in debug perspective in Eclipse
 
+
+unibet => Juventus de Turin
+
+A-ha => The living daylights
+		sting, Russians 
