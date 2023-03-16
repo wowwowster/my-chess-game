@@ -1,7 +1,0 @@
-How to highlight current line of execution in debug perspective in Eclipse
-
-
-unibet => Juventus de Turin
-
-A-ha => The living daylights
-		sting, Russians 
